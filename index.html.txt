@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premature Billionaires Club</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffe259, #ffa751);
+      color: #222;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 42px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .nfts img {
+      width: 220px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .roadmap ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .roadmap li {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+    .cta {
+      background: #111;
+      color: white;
+      padding: 40px 20px;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin: 10px;
+      background: #ffa751;
+      padding: 15px 25px;
+      border-radius: 8px;
+      color: #111;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .cta a:hover {
+      background: #ffe259;
+    }
+
+    footer {
+      background: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    @media(max-width: 768px) {
+      .nfts img {
+        width: 90%;
+        margin: 10px auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Premature Billionaires Club</h1>
+    <p>The most ironically confident NFT collection on Solana.</p>
+  </header>
+
+  <section class="section">
+    <h2>About the Project</h2>
+    <p>We’re not billionaires yet — but we act like we already are.  
+      <br>This is the collection for dreamers, memers, and future web3 legends who failed forward.</p>
+  </section>
+
+  <section class="section nfts">
+    <h2>Sample NFTs</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Example.svg/300px-Example.svg.png" alt="Sample NFT 1">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Example.svg/300px-Example.svg.png" alt="Sample NFT 2">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Example.svg/300px-Example.svg.png" alt="Sample NFT 3">
+  </section>
+
+  <section class="section roadmap">
+    <h2>Roadmap</h2>
+    <ul>
+      <li>✅ Build satirical NFT characters</li>
+      <li>✅ Build free website and comms</li>
+      <li>🔄 Grow the community on Telegram/Discord</li>
+      <li>🔜 Launch on Solana via Magic Eden</li>
+      <li>🚀 Let the memes mint themselves</li>
+    </ul>
+  </section>
+
+  <section class="cta">
+    <h2>Join the Movement</h2>
+    <a href="https://t.me/yourchannel" target="_blank">Join Telegram</a>
+    <a href="#">Mint Soon</a>
+  </section>
+
+  <footer>
+    &copy; 2025 Premature Billionaires Club. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
