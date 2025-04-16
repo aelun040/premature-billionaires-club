@@ -7,6 +7,10 @@
   <title>Premature Billionaires Club</title>
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
+    body, button, input, .progress-bar {
+      font-family: 'Bangers', cursive !important;
+    }
+    
     * {
       box-sizing: border-box;
     }
@@ -14,7 +18,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: url('pbc_background_site_ready.jpg') no-repeat center center fixed; background-size: cover;
+      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
       color: #222;
       overflow-x: hidden;
     }
@@ -140,6 +144,10 @@
   </style>
 
   <style>
+    body, button, input, .progress-bar {
+      font-family: 'Bangers', cursive !important;
+    }
+    
     .flash {
       transition: all 0.3s ease-in-out;
     }
@@ -164,7 +172,19 @@
       line-height: 25px;
     }
   </style>
+
+  <link href='https://fonts.googleapis.com/css2?family=Bangers&display=swap' rel='stylesheet'>
+  <style>
+    body, button, input, .progress-bar {
+      font-family: 'Bangers', cursive !important;
+    }
+    
+    h1, h2, h3 {
+      font-family: 'Bangers', cursive;
+    }
+  </style>
 </head>
+
 
 <body>
 
@@ -335,73 +355,25 @@
 
     
 
-  <section class="section nfts" data-aos="zoom-in-up" data-aos="zoom-in">
-    <h2>Featured NFTs</h2>
-    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-7iwq4C1UQKX9P6SItX9BrJla/user-lzXzKrnHG7kQGu1xARX6nOLi/img-6cb0a517-bfb4-4c56-b24e-def3edc4cbb0.png" alt="NFT 1">
-    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-7iwq4C1UQKX9P6SItX9BrJla/user-lzXzKrnHG7kQGu1xARX6nOLi/img-86effe8b-7d90-4ca1-b5c3-791fc2ea3ac5.png" alt="NFT 2">
-    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-7iwq4C1UQKX9P6SItX9BrJla/user-lzXzKrnHG7kQGu1xARX6nOLi/img-058acab9-8dcd-4ed3-8fab-f1b8f8f4cd25.png" alt="NFT 3">
   
-    <section class="section" data-aos="fade-up">
-      <h2>Pre-sale Access <span style="display:block; font-size:16px; color:#00cc44; margin-top:5px;" id="investorCount" class="flash">653 early investors joined</span></h2>
-      <p>To participate in our early mint round, send USDT (TRC20) to the wallet below, then register your details:</p>
-      
-    <div style="background: #004d00; color: #ffffff; padding: 15px; font-size: 16px; word-break: break-all; border-radius: 8px; margin: 10px auto; max-width: 90%; text-align: center;">
-      <span id="walletAddress">TAZb23Dr596voQdtAZy98N4J9gnaorVqtT</span><br>
-      <button onclick="copyWallet()" style="margin-top: 10px; padding: 10px 20px; background: #00cc44; border: none; border-radius: 5px; color: white; font-weight: bold;">Copy Wallet Address</button>
+<section class="section nfts" data-aos="zoom-in-up">
+  <h2>Featured NFTs</h2>
+  <div class="nft-gallery" style="display: flex; flex-direction: column; align-items: center; gap: 30px;">
+    <div style="text-align: center;">
+      <img src="nft_1.jpg" alt="NFT 1" style="max-width: 300px; width: 100%; border-radius: 12px;">
+      <p style="font-weight: bold;">"Success Loading..." — Глеб на пути к миллиарду</p>
     </div>
-    
-        Wallet: TAZb23Dr596voQdtAZy98N4J9gnaorVqtT
-      </div>
-      <p style="margin-top: 10px;">Minimum contribution: 10 USDT</p>
-
-      <form action="https://formspree.io/f/mwkgrzwk" method="POST" style="max-width: 400px; margin: 30px auto; text-align: left;">
-        <label for="wallet">Your TRC20 Wallet Address:</label><br>
-        <input type="text" name="wallet" id="wallet" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
-        
-        <label for="amount">Amount Sent (USDT):</label><br>
-        <input type="text" name="amount" id="amount" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
-
-        <label for="contact">Telegram or Email:</label><br>
-        <input type="text" name="contact" id="contact" required style="width: 100%; padding: 10px; margin-bottom: 20px;"><br>
-
-        <button type="submit" style="padding: 12px 25px; background: #f39c12; border: none; color: white; font-weight: bold; border-radius: 8px;">
-          Register for Pre-sale
-        </button>
-      </form>
-    
-
-<script>
-  // Flash effect + animated investor counter
-  let baseInvestors = 653;
-  const investorDisplay = document.getElementById("investorCount");
-  const interval = setInterval(() => {
-    baseInvestors++;
-    investorDisplay.textContent = baseInvestors + " early investors joined";
-    investorDisplay.classList.add("flash-active");
-    setTimeout(() => investorDisplay.classList.remove("flash-active"), 400);
-    if (baseInvestors >= 662) clearInterval(interval);
-  }, 6000);
-</script>
-<script>
-
-  // Simulated investor counter
-  let baseInvestors = 653;
-  const investorDisplay = document.getElementById("investorCount");
-  const interval = setInterval(() => {
-    baseInvestors++;
-    investorDisplay.textContent = baseInvestors + " early investors joined";
-    if (baseInvestors >= 662) clearInterval(interval); // stops incrementing after 9 additions
-  }, 6000);
-</script>
-
-    <div class="progress-container" data-aos="fade-up">
-      <div class="progress-bar" id="progressBar">Raised: 6,500 USDT</div>
+    <div style="text-align: center;">
+      <img src="nft_2.jpg" alt="NFT 2" style="max-width: 300px; width: 100%; border-radius: 12px;">
+      <p style="font-weight: bold;">"Клуб Миллиардеров" — ирония, стиль и биткоин</p>
     </div>
-
-    <div class="progress-container" data-aos="fade-up">
-      <div class="progress-bar" id="progressBar">Raised: 6,500 USDT</div>
+    <div style="text-align: center;">
+      <img src="nft_3.jpg" alt="NFT 3" style="max-width: 300px; width: 100%; border-radius: 12px;">
+      <p style="font-weight: bold;">"Будущее уже здесь" — NFT, VR и финансовый сюр</p>
     </div>
+  </div>
 </section>
+
 
 <section class="section" data-aos="fade-up">
   <h2>What Early Investors Get</h2>
@@ -495,56 +467,25 @@
   <section class="section" data-aos="fade-up">
     <h2>Why Join?</h2>
     
-    <section class="section nfts" data-aos="zoom-in-up" data-aos="fade-up">
-      <h2>Example NFTs</h2>
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-        <div style="max-width: 300px;">
-          <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-7iwq4C1UQKX9P6SItX9BrJla/user-lzXzKrnHG7kQGu1xARX6nOLi/img-13f7f389-63f2-4fad-81ca-e9936219d5a7.png" style="width:100%; border-radius: 10px;">
-          <p style="margin-top:10px;"><strong>Gleb Startupovich:</strong> Lives with his mom, runs 4 failed startups, writing a book “How to Make a Billion Without Ideas”.</p>
-        </div>
-        <div style="max-width: 300px;">
-          <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-7iwq4C1UQKX9P6SItX9BrJla/user-lzXzKrnHG7kQGu1xARX6nOLi/img-86effe8b-7d90-4ca1-b5c3-791fc2ea3ac5.png" style="width:100%; border-radius: 10px;">
-          <p style="margin-top:10px;"><strong>Investor Ponomaryov:</strong> Bought Bitcoin at ATH, sold at ATL. Runs a Telegram channel “Everything’s Under Control”.</p>
-        </div>
-        <div style="max-width: 300px;">
-          <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-7iwq4C1UQKX9P6SItX9BrJla/user-lzXzKrnHG7kQGu1xARX6nOLi/img-058acab9-8dcd-4ed3-8fab-f1b8f8f4cd25.png" style="width:100%; border-radius: 10px;">
-          <p style="margin-top:10px;"><strong>Elon Wannabe:</strong> Wears VR in the shower. Believes the metaverse is already here. Sells a $4999 Web3 course.</p>
-        </div>
-      </div>
     
-
-<script>
-  // Flash effect + animated investor counter
-  let baseInvestors = 653;
-  const investorDisplay = document.getElementById("investorCount");
-  const interval = setInterval(() => {
-    baseInvestors++;
-    investorDisplay.textContent = baseInvestors + " early investors joined";
-    investorDisplay.classList.add("flash-active");
-    setTimeout(() => investorDisplay.classList.remove("flash-active"), 400);
-    if (baseInvestors >= 662) clearInterval(interval);
-  }, 6000);
-</script>
-<script>
-
-  // Simulated investor counter
-  let baseInvestors = 653;
-  const investorDisplay = document.getElementById("investorCount");
-  const interval = setInterval(() => {
-    baseInvestors++;
-    investorDisplay.textContent = baseInvestors + " early investors joined";
-    if (baseInvestors >= 662) clearInterval(interval); // stops incrementing after 9 additions
-  }, 6000);
-</script>
-
-    <div class="progress-container" data-aos="fade-up">
-      <div class="progress-bar" id="progressBar">Raised: 6,500 USDT</div>
+<section class="section nfts" data-aos="zoom-in-up">
+  <h2>Featured NFTs</h2>
+  <div class="nft-gallery" style="display: flex; flex-direction: column; align-items: center; gap: 30px;">
+    <div style="text-align: center;">
+      <img src="nft_1.jpg" alt="NFT 1" style="max-width: 300px; width: 100%; border-radius: 12px;">
+      <p style="font-weight: bold;">"Success Loading..." — Глеб на пути к миллиарду</p>
     </div>
-
-    <div class="progress-container" data-aos="fade-up">
-      <div class="progress-bar" id="progressBar">Raised: 6,500 USDT</div>
+    <div style="text-align: center;">
+      <img src="nft_2.jpg" alt="NFT 2" style="max-width: 300px; width: 100%; border-radius: 12px;">
+      <p style="font-weight: bold;">"Клуб Миллиардеров" — ирония, стиль и биткоин</p>
     </div>
+    <div style="text-align: center;">
+      <img src="nft_3.jpg" alt="NFT 3" style="max-width: 300px; width: 100%; border-radius: 12px;">
+      <p style="font-weight: bold;">"Будущее уже здесь" — NFT, VR и финансовый сюр</p>
+    </div>
+  </div>
 </section>
+
 
 <section class="section" data-aos="fade-up">
   <h2>What Early Investors Get</h2>
