@@ -1,0 +1,1019 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Premature Billionaires Club</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    body, button, input, .progress-bar {
+      font-family: 'Bangers', cursive !important;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+      color: #222;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: relative;
+      background: linear-gradient(to right, #2c3e50, #fd746c);
+      color: white;
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    header h1 {
+      font-size: 48px;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    header p {
+      font-size: 20px;
+      margin-top: 10px;
+      opacity: 0.9;
+    }
+
+    .hero-img {
+      max-width: 300px;
+      border-radius: 20px;
+      margin-top: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .nfts img {
+      width: 250px;
+      margin: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .nfts img:hover {
+      transform: scale(1.05);
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .feature-box {
+      width: 260px;
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    .feature-box h3 {
+      margin-top: 10px;
+      font-size: 20px;
+      color: #e67e22;
+    }
+
+    .cta {
+      background: #2c3e50;
+      color: white;
+      padding: 60px 20px;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin: 15px;
+      background: #f39c12;
+      padding: 16px 28px;
+      border-radius: 10px;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .cta a:hover {
+      background: #f1c40f;
+      color: #222;
+    }
+
+    footer {
+      background: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    @media(max-width: 768px) {
+      header h1 {
+        font-size: 36px;
+      }
+
+      .nfts img {
+        width: 90%;
+        margin: 10px auto;
+      }
+
+      .feature-box {
+        width: 90%;
+      }
+    }
+  </style>
+
+  <style>
+    body, button, input, .progress-bar {
+      font-family: 'Bangers', cursive !important;
+    }
+    
+    .flash {
+      transition: all 0.3s ease-in-out;
+    }
+    .flash-active {
+      color: #00ff66 !important;
+      transform: scale(1.05);
+    }
+    .progress-container {
+      max-width: 400px;
+      margin: 20px auto;
+      background: #eee;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      height: 25px;
+      background: linear-gradient(to right, #00cc44, #66ff99);
+      width: 65%; /* Default example: 65% to goal */
+      text-align: center;
+      color: #fff;
+      font-weight: bold;
+      line-height: 25px;
+    }
+  </style>
+
+  <link href='https://fonts.googleapis.com/css2?family=Bangers&display=swap' rel='stylesheet'>
+  <style>
+    body, button, input, .progress-bar {
+      font-family: 'Bangers', cursive !important;
+    }
+    
+    h1, h2, h3 {
+      font-family: 'Bangers', cursive;
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <header data-aos="fade-down">
+    <h1>Premature Billionaires Club</h1>
+    <p>Almost rich. Definitely confident.</p>
+    <img class="hero-img" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-7iwq4C1UQKX9P6SItX9BrJla/user-lzXzKrnHG7kQGu1xARX6nOLi/img-13f7f389-63f2-4fad-81ca-e9936219d5a7.png" alt="Hero NFT"/>
+  
+    <div style="margin-top: 30px;">
+      <h2 style="font-size: 28px; margin-bottom: 10px;">Mint Launches In:</h2>
+      <div id="countdown" style="font-size: 32px; font-weight: bold; margin-top: 10px;"></div>
+    </div>
+    </header>
+    
+
+  <section class="section" data-aos="fade-up">
+    <h2>About the Collection</h2>
+    <p>This is where the wannabe billionaires gather. Each NFT is a perfectly ironic reflection of a generation raised on hustle culture, crypto hype, and motivational quotes.</p>
+  
+    <section class="section" data-aos="fade-up">
+      <h2>Pre-sale Access <span style="display:block; font-size:16px; color:#00cc44; margin-top:5px;" id="investorCount" class="flash">653 early investors joined</span></h2>
+      <p>To participate in our early mint round, send USDT (TRC20) to the wallet below, then register your details:</p>
+      
+    <div style="background: #004d00; color: #ffffff; padding: 15px; font-size: 16px; word-break: break-all; border-radius: 8px; margin: 10px auto; max-width: 90%; text-align: center;">
+      <span id="walletAddress">TAZb23Dr596voQdtAZy98N4J9gnaorVqtT</span><br>
+      <button onclick="copyWallet()" style="margin-top: 10px; padding: 10px 20px; background: #00cc44; border: none; border-radius: 5px; color: white; font-weight: bold;">Copy Wallet Address</button>
+    </div>
+    
+        Wallet: TAZb23Dr596voQdtAZy98N4J9gnaorVqtT
+      </div>
+      <p style="margin-top: 10px;">Minimum contribution: 10 USDT</p>
+
+      <form action="https://formspree.io/f/mwkgrzwk" method="POST" style="max-width: 400px; margin: 30px auto; text-align: left;">
+        <label for="wallet">Your TRC20 Wallet Address:</label><br>
+        <input type="text" name="wallet" id="wallet" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+        
+        <label for="amount">Amount Sent (USDT):</label><br>
+        <input type="text" name="amount" id="amount" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+        <label for="contact">Telegram or Email:</label><br>
+        <input type="text" name="contact" id="contact" required style="width: 100%; padding: 10px; margin-bottom: 20px;"><br>
+
+        <button type="submit" style="padding: 12px 25px; background: #f39c12; border: none; color: white; font-weight: bold; border-radius: 8px;">
+          Register for Pre-sale
+        </button>
+      </form>
+    
+
+<script>
+  // Flash effect + animated investor counter
+  let baseInvestors = 653;
+  const investorDisplay = document.getElementById("investorCount");
+  const interval = setInterval(() => {
+    baseInvestors++;
+    investorDisplay.textContent = baseInvestors + " early investors joined";
+    investorDisplay.classList.add("flash-active");
+    setTimeout(() => investorDisplay.classList.remove("flash-active"), 400);
+    if (baseInvestors >= 662) clearInterval(interval);
+  }, 6000);
+</script>
+<script>
+
+  // Simulated investor counter
+  let baseInvestors = 653;
+  const investorDisplay = document.getElementById("investorCount");
+  const interval = setInterval(() => {
+    baseInvestors++;
+    investorDisplay.textContent = baseInvestors + " early investors joined";
+    if (baseInvestors >= 662) clearInterval(interval); // stops incrementing after 9 additions
+  }, 6000);
+</script>
+
+    <div class="progress-container" data-aos="fade-up">
+      <div class="progress-bar" id="progressBar">Raised: 6,500 USDT</div>
+    </div>
+
+    <div class="progress-container" data-aos="fade-up">
+      <div class="progress-bar" id="progressBar">Raised: 6,500 USDT</div>
+    </div>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>What Early Investors Get</h2>
+  <div class="features">
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Guaranteed Mint Spot</h3>
+      <p>You’ll be whitelisted for the main sale — no gas war, no stress.</p>
+    </div>
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Exclusive Airdrop</h3>
+      <p>Receive bonus NFTs or collectibles available only for early investors.</p>
+    </div>
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Premium Rarity</h3>
+      <p>Top contributors get a random legendary NFT from the Genesis batch.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>Referral Opportunity</h2>
+  <p>Invite friends to join the early sale. For every confirmed investor, you'll get <strong>extra airdrop entries</strong> and early access to upcoming features.</p>
+  <p style="font-size: 14px; color: #999;">(Tracking is manual during pre-launch. Let your referrals include your wallet or @username in the form.)</p>
+</section>
+
+
+
+    
+
+<script>
+  // Flash effect + animated investor counter
+  let baseInvestors = 653;
+  const investorDisplay = document.getElementById("investorCount");
+  const interval = setInterval(() => {
+    baseInvestors++;
+    investorDisplay.textContent = baseInvestors + " early investors joined";
+    investorDisplay.classList.add("flash-active");
+    setTimeout(() => investorDisplay.classList.remove("flash-active"), 400);
+    if (baseInvestors >= 662) clearInterval(interval);
+  }, 6000);
+</script>
+<script>
+
+  // Simulated investor counter
+  let baseInvestors = 653;
+  const investorDisplay = document.getElementById("investorCount");
+  const interval = setInterval(() => {
+    baseInvestors++;
+    investorDisplay.textContent = baseInvestors + " early investors joined";
+    if (baseInvestors >= 662) clearInterval(interval); // stops incrementing after 9 additions
+  }, 6000);
+</script>
+
+    <div class="progress-container" data-aos="fade-up">
+      <div class="progress-bar" id="progressBar">Raised: 6,500 USDT</div>
+    </div>
+
+    <div class="progress-container" data-aos="fade-up">
+      <div class="progress-bar" id="progressBar">Raised: 6,500 USDT</div>
+    </div>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>What Early Investors Get</h2>
+  <div class="features">
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Guaranteed Mint Spot</h3>
+      <p>You’ll be whitelisted for the main sale — no gas war, no stress.</p>
+    </div>
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Exclusive Airdrop</h3>
+      <p>Receive bonus NFTs or collectibles available only for early investors.</p>
+    </div>
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Premium Rarity</h3>
+      <p>Top contributors get a random legendary NFT from the Genesis batch.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>Referral Opportunity</h2>
+  <p>Invite friends to join the early sale. For every confirmed investor, you'll get <strong>extra airdrop entries</strong> and early access to upcoming features.</p>
+  <p style="font-size: 14px; color: #999;">(Tracking is manual during pre-launch. Let your referrals include your wallet or @username in the form.)</p>
+</section>
+
+
+
+    
+
+  <section class="section nfts" data-aos="zoom-in-up" data-aos="zoom-in">
+    <h2>Featured NFTs</h2>
+    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-7iwq4C1UQKX9P6SItX9BrJla/user-lzXzKrnHG7kQGu1xARX6nOLi/img-6cb0a517-bfb4-4c56-b24e-def3edc4cbb0.png" alt="NFT 1">
+    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-7iwq4C1UQKX9P6SItX9BrJla/user-lzXzKrnHG7kQGu1xARX6nOLi/img-86effe8b-7d90-4ca1-b5c3-791fc2ea3ac5.png" alt="NFT 2">
+    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-7iwq4C1UQKX9P6SItX9BrJla/user-lzXzKrnHG7kQGu1xARX6nOLi/img-058acab9-8dcd-4ed3-8fab-f1b8f8f4cd25.png" alt="NFT 3">
+  
+    <section class="section" data-aos="fade-up">
+      <h2>Pre-sale Access <span style="display:block; font-size:16px; color:#00cc44; margin-top:5px;" id="investorCount" class="flash">653 early investors joined</span></h2>
+      <p>To participate in our early mint round, send USDT (TRC20) to the wallet below, then register your details:</p>
+      
+    <div style="background: #004d00; color: #ffffff; padding: 15px; font-size: 16px; word-break: break-all; border-radius: 8px; margin: 10px auto; max-width: 90%; text-align: center;">
+      <span id="walletAddress">TAZb23Dr596voQdtAZy98N4J9gnaorVqtT</span><br>
+      <button onclick="copyWallet()" style="margin-top: 10px; padding: 10px 20px; background: #00cc44; border: none; border-radius: 5px; color: white; font-weight: bold;">Copy Wallet Address</button>
+    </div>
+    
+        Wallet: TAZb23Dr596voQdtAZy98N4J9gnaorVqtT
+      </div>
+      <p style="margin-top: 10px;">Minimum contribution: 10 USDT</p>
+
+      <form action="https://formspree.io/f/mwkgrzwk" method="POST" style="max-width: 400px; margin: 30px auto; text-align: left;">
+        <label for="wallet">Your TRC20 Wallet Address:</label><br>
+        <input type="text" name="wallet" id="wallet" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+        
+        <label for="amount">Amount Sent (USDT):</label><br>
+        <input type="text" name="amount" id="amount" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+        <label for="contact">Telegram or Email:</label><br>
+        <input type="text" name="contact" id="contact" required style="width: 100%; padding: 10px; margin-bottom: 20px;"><br>
+
+        <button type="submit" style="padding: 12px 25px; background: #f39c12; border: none; color: white; font-weight: bold; border-radius: 8px;">
+          Register for Pre-sale
+        </button>
+      </form>
+    
+
+<script>
+  // Flash effect + animated investor counter
+  let baseInvestors = 653;
+  const investorDisplay = document.getElementById("investorCount");
+  const interval = setInterval(() => {
+    baseInvestors++;
+    investorDisplay.textContent = baseInvestors + " early investors joined";
+    investorDisplay.classList.add("flash-active");
+    setTimeout(() => investorDisplay.classList.remove("flash-active"), 400);
+    if (baseInvestors >= 662) clearInterval(interval);
+  }, 6000);
+</script>
+<script>
+
+  // Simulated investor counter
+  let baseInvestors = 653;
+  const investorDisplay = document.getElementById("investorCount");
+  const interval = setInterval(() => {
+    baseInvestors++;
+    investorDisplay.textContent = baseInvestors + " early investors joined";
+    if (baseInvestors >= 662) clearInterval(interval); // stops incrementing after 9 additions
+  }, 6000);
+</script>
+
+    <div class="progress-container" data-aos="fade-up">
+      <div class="progress-bar" id="progressBar">Raised: 6,500 USDT</div>
+    </div>
+
+    <div class="progress-container" data-aos="fade-up">
+      <div class="progress-bar" id="progressBar">Raised: 6,500 USDT</div>
+    </div>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>What Early Investors Get</h2>
+  <div class="features">
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Guaranteed Mint Spot</h3>
+      <p>You’ll be whitelisted for the main sale — no gas war, no stress.</p>
+    </div>
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Exclusive Airdrop</h3>
+      <p>Receive bonus NFTs or collectibles available only for early investors.</p>
+    </div>
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Premium Rarity</h3>
+      <p>Top contributors get a random legendary NFT from the Genesis batch.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>Referral Opportunity</h2>
+  <p>Invite friends to join the early sale. For every confirmed investor, you'll get <strong>extra airdrop entries</strong> and early access to upcoming features.</p>
+  <p style="font-size: 14px; color: #999;">(Tracking is manual during pre-launch. Let your referrals include your wallet or @username in the form.)</p>
+</section>
+
+
+
+    
+
+<script>
+  // Flash effect + animated investor counter
+  let baseInvestors = 653;
+  const investorDisplay = document.getElementById("investorCount");
+  const interval = setInterval(() => {
+    baseInvestors++;
+    investorDisplay.textContent = baseInvestors + " early investors joined";
+    investorDisplay.classList.add("flash-active");
+    setTimeout(() => investorDisplay.classList.remove("flash-active"), 400);
+    if (baseInvestors >= 662) clearInterval(interval);
+  }, 6000);
+</script>
+<script>
+
+  // Simulated investor counter
+  let baseInvestors = 653;
+  const investorDisplay = document.getElementById("investorCount");
+  const interval = setInterval(() => {
+    baseInvestors++;
+    investorDisplay.textContent = baseInvestors + " early investors joined";
+    if (baseInvestors >= 662) clearInterval(interval); // stops incrementing after 9 additions
+  }, 6000);
+</script>
+
+    <div class="progress-container" data-aos="fade-up">
+      <div class="progress-bar" id="progressBar">Raised: 6,500 USDT</div>
+    </div>
+
+    <div class="progress-container" data-aos="fade-up">
+      <div class="progress-bar" id="progressBar">Raised: 6,500 USDT</div>
+    </div>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>What Early Investors Get</h2>
+  <div class="features">
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Guaranteed Mint Spot</h3>
+      <p>You’ll be whitelisted for the main sale — no gas war, no stress.</p>
+    </div>
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Exclusive Airdrop</h3>
+      <p>Receive bonus NFTs or collectibles available only for early investors.</p>
+    </div>
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Premium Rarity</h3>
+      <p>Top contributors get a random legendary NFT from the Genesis batch.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>Referral Opportunity</h2>
+  <p>Invite friends to join the early sale. For every confirmed investor, you'll get <strong>extra airdrop entries</strong> and early access to upcoming features.</p>
+  <p style="font-size: 14px; color: #999;">(Tracking is manual during pre-launch. Let your referrals include your wallet or @username in the form.)</p>
+</section>
+
+
+
+    
+
+  <section class="section" data-aos="fade-up">
+    <h2>Why Join?</h2>
+    
+    <section class="section nfts" data-aos="zoom-in-up" data-aos="fade-up">
+      <h2>Example NFTs</h2>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+        <div style="max-width: 300px;">
+          <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-7iwq4C1UQKX9P6SItX9BrJla/user-lzXzKrnHG7kQGu1xARX6nOLi/img-13f7f389-63f2-4fad-81ca-e9936219d5a7.png" style="width:100%; border-radius: 10px;">
+          <p style="margin-top:10px;"><strong>Gleb Startupovich:</strong> Lives with his mom, runs 4 failed startups, writing a book “How to Make a Billion Without Ideas”.</p>
+        </div>
+        <div style="max-width: 300px;">
+          <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-7iwq4C1UQKX9P6SItX9BrJla/user-lzXzKrnHG7kQGu1xARX6nOLi/img-86effe8b-7d90-4ca1-b5c3-791fc2ea3ac5.png" style="width:100%; border-radius: 10px;">
+          <p style="margin-top:10px;"><strong>Investor Ponomaryov:</strong> Bought Bitcoin at ATH, sold at ATL. Runs a Telegram channel “Everything’s Under Control”.</p>
+        </div>
+        <div style="max-width: 300px;">
+          <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-7iwq4C1UQKX9P6SItX9BrJla/user-lzXzKrnHG7kQGu1xARX6nOLi/img-058acab9-8dcd-4ed3-8fab-f1b8f8f4cd25.png" style="width:100%; border-radius: 10px;">
+          <p style="margin-top:10px;"><strong>Elon Wannabe:</strong> Wears VR in the shower. Believes the metaverse is already here. Sells a $4999 Web3 course.</p>
+        </div>
+      </div>
+    
+
+<script>
+  // Flash effect + animated investor counter
+  let baseInvestors = 653;
+  const investorDisplay = document.getElementById("investorCount");
+  const interval = setInterval(() => {
+    baseInvestors++;
+    investorDisplay.textContent = baseInvestors + " early investors joined";
+    investorDisplay.classList.add("flash-active");
+    setTimeout(() => investorDisplay.classList.remove("flash-active"), 400);
+    if (baseInvestors >= 662) clearInterval(interval);
+  }, 6000);
+</script>
+<script>
+
+  // Simulated investor counter
+  let baseInvestors = 653;
+  const investorDisplay = document.getElementById("investorCount");
+  const interval = setInterval(() => {
+    baseInvestors++;
+    investorDisplay.textContent = baseInvestors + " early investors joined";
+    if (baseInvestors >= 662) clearInterval(interval); // stops incrementing after 9 additions
+  }, 6000);
+</script>
+
+    <div class="progress-container" data-aos="fade-up">
+      <div class="progress-bar" id="progressBar">Raised: 6,500 USDT</div>
+    </div>
+
+    <div class="progress-container" data-aos="fade-up">
+      <div class="progress-bar" id="progressBar">Raised: 6,500 USDT</div>
+    </div>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>What Early Investors Get</h2>
+  <div class="features">
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Guaranteed Mint Spot</h3>
+      <p>You’ll be whitelisted for the main sale — no gas war, no stress.</p>
+    </div>
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Exclusive Airdrop</h3>
+      <p>Receive bonus NFTs or collectibles available only for early investors.</p>
+    </div>
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Premium Rarity</h3>
+      <p>Top contributors get a random legendary NFT from the Genesis batch.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>Referral Opportunity</h2>
+  <p>Invite friends to join the early sale. For every confirmed investor, you'll get <strong>extra airdrop entries</strong> and early access to upcoming features.</p>
+  <p style="font-size: 14px; color: #999;">(Tracking is manual during pre-launch. Let your referrals include your wallet or @username in the form.)</p>
+</section>
+
+
+
+    <div class="features">
+    
+      <div class="feature-box" data-aos="flip-left">
+        <h3>Meme-Ready Art</div>
+        <p>Each character is crafted for max virality. Be the owner of the next crypto meme icon.</p>
+      </div>
+      <div class="feature-box" data-aos="flip-up">
+        <h3>Real Utility (Eventually)</div>
+        <p>We promise nothing now — but trust us, something might come.</p>
+      </div>
+      <div class="feature-box" data-aos="flip-right">
+        <h3>Community Chaos</div>
+        <p>Join like-minded visionaries who screenshot NFTs and live with no regrets.</p>
+      </div>
+    </div>
+  
+    <section class="section" data-aos="fade-up">
+      <h2>Pre-sale Access <span style="display:block; font-size:16px; color:#00cc44; margin-top:5px;" id="investorCount" class="flash">653 early investors joined</span></h2>
+      <p>To participate in our early mint round, send USDT (TRC20) to the wallet below, then register your details:</p>
+      
+    <div style="background: #004d00; color: #ffffff; padding: 15px; font-size: 16px; word-break: break-all; border-radius: 8px; margin: 10px auto; max-width: 90%; text-align: center;">
+      <span id="walletAddress">TAZb23Dr596voQdtAZy98N4J9gnaorVqtT</span><br>
+      <button onclick="copyWallet()" style="margin-top: 10px; padding: 10px 20px; background: #00cc44; border: none; border-radius: 5px; color: white; font-weight: bold;">Copy Wallet Address</button>
+    </div>
+    
+        Wallet: TAZb23Dr596voQdtAZy98N4J9gnaorVqtT
+      </div>
+      <p style="margin-top: 10px;">Minimum contribution: 10 USDT</p>
+
+      <form action="https://formspree.io/f/mwkgrzwk" method="POST" style="max-width: 400px; margin: 30px auto; text-align: left;">
+        <label for="wallet">Your TRC20 Wallet Address:</label><br>
+        <input type="text" name="wallet" id="wallet" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+        
+        <label for="amount">Amount Sent (USDT):</label><br>
+        <input type="text" name="amount" id="amount" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+        <label for="contact">Telegram or Email:</label><br>
+        <input type="text" name="contact" id="contact" required style="width: 100%; padding: 10px; margin-bottom: 20px;"><br>
+
+        <button type="submit" style="padding: 12px 25px; background: #f39c12; border: none; color: white; font-weight: bold; border-radius: 8px;">
+          Register for Pre-sale
+        </button>
+      </form>
+    
+
+<script>
+  // Flash effect + animated investor counter
+  let baseInvestors = 653;
+  const investorDisplay = document.getElementById("investorCount");
+  const interval = setInterval(() => {
+    baseInvestors++;
+    investorDisplay.textContent = baseInvestors + " early investors joined";
+    investorDisplay.classList.add("flash-active");
+    setTimeout(() => investorDisplay.classList.remove("flash-active"), 400);
+    if (baseInvestors >= 662) clearInterval(interval);
+  }, 6000);
+</script>
+<script>
+
+  // Simulated investor counter
+  let baseInvestors = 653;
+  const investorDisplay = document.getElementById("investorCount");
+  const interval = setInterval(() => {
+    baseInvestors++;
+    investorDisplay.textContent = baseInvestors + " early investors joined";
+    if (baseInvestors >= 662) clearInterval(interval); // stops incrementing after 9 additions
+  }, 6000);
+</script>
+
+    <div class="progress-container" data-aos="fade-up">
+      <div class="progress-bar" id="progressBar">Raised: 6,500 USDT</div>
+    </div>
+
+    <div class="progress-container" data-aos="fade-up">
+      <div class="progress-bar" id="progressBar">Raised: 6,500 USDT</div>
+    </div>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>What Early Investors Get</h2>
+  <div class="features">
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Guaranteed Mint Spot</h3>
+      <p>You’ll be whitelisted for the main sale — no gas war, no stress.</p>
+    </div>
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Exclusive Airdrop</h3>
+      <p>Receive bonus NFTs or collectibles available only for early investors.</p>
+    </div>
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Premium Rarity</h3>
+      <p>Top contributors get a random legendary NFT from the Genesis batch.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>Referral Opportunity</h2>
+  <p>Invite friends to join the early sale. For every confirmed investor, you'll get <strong>extra airdrop entries</strong> and early access to upcoming features.</p>
+  <p style="font-size: 14px; color: #999;">(Tracking is manual during pre-launch. Let your referrals include your wallet or @username in the form.)</p>
+</section>
+
+
+
+    
+
+<script>
+  // Flash effect + animated investor counter
+  let baseInvestors = 653;
+  const investorDisplay = document.getElementById("investorCount");
+  const interval = setInterval(() => {
+    baseInvestors++;
+    investorDisplay.textContent = baseInvestors + " early investors joined";
+    investorDisplay.classList.add("flash-active");
+    setTimeout(() => investorDisplay.classList.remove("flash-active"), 400);
+    if (baseInvestors >= 662) clearInterval(interval);
+  }, 6000);
+</script>
+<script>
+
+  // Simulated investor counter
+  let baseInvestors = 653;
+  const investorDisplay = document.getElementById("investorCount");
+  const interval = setInterval(() => {
+    baseInvestors++;
+    investorDisplay.textContent = baseInvestors + " early investors joined";
+    if (baseInvestors >= 662) clearInterval(interval); // stops incrementing after 9 additions
+  }, 6000);
+</script>
+
+    <div class="progress-container" data-aos="fade-up">
+      <div class="progress-bar" id="progressBar">Raised: 6,500 USDT</div>
+    </div>
+
+    <div class="progress-container" data-aos="fade-up">
+      <div class="progress-bar" id="progressBar">Raised: 6,500 USDT</div>
+    </div>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>What Early Investors Get</h2>
+  <div class="features">
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Guaranteed Mint Spot</h3>
+      <p>You’ll be whitelisted for the main sale — no gas war, no stress.</p>
+    </div>
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Exclusive Airdrop</h3>
+      <p>Receive bonus NFTs or collectibles available only for early investors.</p>
+    </div>
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Premium Rarity</h3>
+      <p>Top contributors get a random legendary NFT from the Genesis batch.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>Referral Opportunity</h2>
+  <p>Invite friends to join the early sale. For every confirmed investor, you'll get <strong>extra airdrop entries</strong> and early access to upcoming features.</p>
+  <p style="font-size: 14px; color: #999;">(Tracking is manual during pre-launch. Let your referrals include your wallet or @username in the form.)</p>
+</section>
+
+
+
+    
+
+  <section class="cta" data-aos="zoom-in">
+    <h2>Join the Movement</h2>
+    <a href="https://t.me/yourchannel" target="_blank">Join Telegram</a>
+    <a href="https://t.me/pbc_presale_bot" target="_blank">Register via Telegram Bot</a>
+  
+    <section class="section" data-aos="fade-up">
+      <h2>Pre-sale Access <span style="display:block; font-size:16px; color:#00cc44; margin-top:5px;" id="investorCount" class="flash">653 early investors joined</span></h2>
+      <p>To participate in our early mint round, send USDT (TRC20) to the wallet below, then register your details:</p>
+      
+    <div style="background: #004d00; color: #ffffff; padding: 15px; font-size: 16px; word-break: break-all; border-radius: 8px; margin: 10px auto; max-width: 90%; text-align: center;">
+      <span id="walletAddress">TAZb23Dr596voQdtAZy98N4J9gnaorVqtT</span><br>
+      <button onclick="copyWallet()" style="margin-top: 10px; padding: 10px 20px; background: #00cc44; border: none; border-radius: 5px; color: white; font-weight: bold;">Copy Wallet Address</button>
+    </div>
+    
+        Wallet: TAZb23Dr596voQdtAZy98N4J9gnaorVqtT
+      </div>
+      <p style="margin-top: 10px;">Minimum contribution: 10 USDT</p>
+
+      <form action="https://formspree.io/f/mwkgrzwk" method="POST" style="max-width: 400px; margin: 30px auto; text-align: left;">
+        <label for="wallet">Your TRC20 Wallet Address:</label><br>
+        <input type="text" name="wallet" id="wallet" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+        
+        <label for="amount">Amount Sent (USDT):</label><br>
+        <input type="text" name="amount" id="amount" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+        <label for="contact">Telegram or Email:</label><br>
+        <input type="text" name="contact" id="contact" required style="width: 100%; padding: 10px; margin-bottom: 20px;"><br>
+
+        <button type="submit" style="padding: 12px 25px; background: #f39c12; border: none; color: white; font-weight: bold; border-radius: 8px;">
+          Register for Pre-sale
+        </button>
+      </form>
+    
+
+<script>
+  // Flash effect + animated investor counter
+  let baseInvestors = 653;
+  const investorDisplay = document.getElementById("investorCount");
+  const interval = setInterval(() => {
+    baseInvestors++;
+    investorDisplay.textContent = baseInvestors + " early investors joined";
+    investorDisplay.classList.add("flash-active");
+    setTimeout(() => investorDisplay.classList.remove("flash-active"), 400);
+    if (baseInvestors >= 662) clearInterval(interval);
+  }, 6000);
+</script>
+<script>
+
+  // Simulated investor counter
+  let baseInvestors = 653;
+  const investorDisplay = document.getElementById("investorCount");
+  const interval = setInterval(() => {
+    baseInvestors++;
+    investorDisplay.textContent = baseInvestors + " early investors joined";
+    if (baseInvestors >= 662) clearInterval(interval); // stops incrementing after 9 additions
+  }, 6000);
+</script>
+
+    <div class="progress-container" data-aos="fade-up">
+      <div class="progress-bar" id="progressBar">Raised: 6,500 USDT</div>
+    </div>
+
+    <div class="progress-container" data-aos="fade-up">
+      <div class="progress-bar" id="progressBar">Raised: 6,500 USDT</div>
+    </div>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>What Early Investors Get</h2>
+  <div class="features">
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Guaranteed Mint Spot</h3>
+      <p>You’ll be whitelisted for the main sale — no gas war, no stress.</p>
+    </div>
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Exclusive Airdrop</h3>
+      <p>Receive bonus NFTs or collectibles available only for early investors.</p>
+    </div>
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Premium Rarity</h3>
+      <p>Top contributors get a random legendary NFT from the Genesis batch.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>Referral Opportunity</h2>
+  <p>Invite friends to join the early sale. For every confirmed investor, you'll get <strong>extra airdrop entries</strong> and early access to upcoming features.</p>
+  <p style="font-size: 14px; color: #999;">(Tracking is manual during pre-launch. Let your referrals include your wallet or @username in the form.)</p>
+</section>
+
+
+
+    
+
+<script>
+  // Flash effect + animated investor counter
+  let baseInvestors = 653;
+  const investorDisplay = document.getElementById("investorCount");
+  const interval = setInterval(() => {
+    baseInvestors++;
+    investorDisplay.textContent = baseInvestors + " early investors joined";
+    investorDisplay.classList.add("flash-active");
+    setTimeout(() => investorDisplay.classList.remove("flash-active"), 400);
+    if (baseInvestors >= 662) clearInterval(interval);
+  }, 6000);
+</script>
+<script>
+
+  // Simulated investor counter
+  let baseInvestors = 653;
+  const investorDisplay = document.getElementById("investorCount");
+  const interval = setInterval(() => {
+    baseInvestors++;
+    investorDisplay.textContent = baseInvestors + " early investors joined";
+    if (baseInvestors >= 662) clearInterval(interval); // stops incrementing after 9 additions
+  }, 6000);
+</script>
+
+    <div class="progress-container" data-aos="fade-up">
+      <div class="progress-bar" id="progressBar">Raised: 6,500 USDT</div>
+    </div>
+
+    <div class="progress-container" data-aos="fade-up">
+      <div class="progress-bar" id="progressBar">Raised: 6,500 USDT</div>
+    </div>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>What Early Investors Get</h2>
+  <div class="features">
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Guaranteed Mint Spot</h3>
+      <p>You’ll be whitelisted for the main sale — no gas war, no stress.</p>
+    </div>
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Exclusive Airdrop</h3>
+      <p>Receive bonus NFTs or collectibles available only for early investors.</p>
+    </div>
+    <div class="feature-box" data-aos="zoom-in">
+      <h3>Premium Rarity</h3>
+      <p>Top contributors get a random legendary NFT from the Genesis batch.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>Referral Opportunity</h2>
+  <p>Invite friends to join the early sale. For every confirmed investor, you'll get <strong>extra airdrop entries</strong> and early access to upcoming features.</p>
+  <p style="font-size: 14px; color: #999;">(Tracking is manual during pre-launch. Let your referrals include your wallet or @username in the form.)</p>
+</section>
+
+
+
+    
+
+  <footer>
+    &copy; 2025 Premature Billionaires Club. All Rights Reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  
+<script>
+  // Flash effect + animated investor counter
+  let baseInvestors = 653;
+  const investorDisplay = document.getElementById("investorCount");
+  const interval = setInterval(() => {
+    baseInvestors++;
+    investorDisplay.textContent = baseInvestors + " early investors joined";
+    investorDisplay.classList.add("flash-active");
+    setTimeout(() => investorDisplay.classList.remove("flash-active"), 400);
+    if (baseInvestors >= 662) clearInterval(interval);
+  }, 6000);
+</script>
+<script>
+
+    AOS.init({
+      duration: 1200,
+      once: true
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  
+<script>
+  // Flash effect + animated investor counter
+  let baseInvestors = 653;
+  const investorDisplay = document.getElementById("investorCount");
+  const interval = setInterval(() => {
+    baseInvestors++;
+    investorDisplay.textContent = baseInvestors + " early investors joined";
+    investorDisplay.classList.add("flash-active");
+    setTimeout(() => investorDisplay.classList.remove("flash-active"), 400);
+    if (baseInvestors >= 662) clearInterval(interval);
+  }, 6000);
+</script>
+<script>
+
+    AOS.init({
+      duration: 1200,
+      once: true
+    });
+
+    // Countdown timer (60 days from now)
+    const countdown = document.getElementById('countdown');
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 60);
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate.getTime() - now;
+
+      if (distance < 0) {
+        countdown.innerHTML = "Minting Now!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+
+
+<script>
+  // Flash effect + animated investor counter
+  let baseInvestors = 653;
+  const investorDisplay = document.getElementById("investorCount");
+  const interval = setInterval(() => {
+    baseInvestors++;
+    investorDisplay.textContent = baseInvestors + " early investors joined";
+    investorDisplay.classList.add("flash-active");
+    setTimeout(() => investorDisplay.classList.remove("flash-active"), 400);
+    if (baseInvestors >= 662) clearInterval(interval);
+  }, 6000);
+</script>
+<script>
+
+  function copyWallet() {
+    const text = document.getElementById('walletAddress').textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      alert('Wallet address copied!');
+    });
+  }
+</script>
+</body>
+</html>
+
+</html>
+
+</html>
