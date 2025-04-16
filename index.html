@@ -994,6 +994,45 @@
     document.getElementById("usdt").innerText = content[lang].usdt;
   }
 </script>
+
+<script>
+  const content = {
+    en: {
+      title: "Premature Billionaires Club",
+      subtitle: "Almost rich. Definitely confident.",
+      countdown: "Mint Launches In:",
+      nfts: "Featured NFTs",
+      raised: "Raised so far",
+      nft1: `"Success Loading..." — Gleb on his way to billions`,
+      nft2: `"Billionaire Club" — Irony, style and Bitcoin`,
+      nft3: `"The future is here" — NFT, VR and finance chaos`,
+      usdt: "6,500 USDT"
+    },
+    ru: {
+      title: "Клуб Преждевременных Миллиардеров",
+      subtitle: "Почти богат. Абсолютно уверен.",
+      countdown: "До запуска минта осталось:",
+      nfts: "Выбранные NFT",
+      raised: "Собрано",
+      nft1: `"Загрузка успеха..." — Глеб на пути к миллиарду`,
+      nft2: `"Клуб Миллиардеров" — ирония, стиль и биткоин`,
+      nft3: `"Будущее уже здесь" — NFT, VR и финансовый сюр`,
+      usdt: "6 500 USDT"
+    }
+  };
+
+  function switchLanguage(lang) {
+    document.getElementById("title").innerText = content[lang].title;
+    document.getElementById("subtitle").innerText = content[lang].subtitle;
+    document.getElementById("countdownLabel").innerText = content[lang].countdown;
+    document.getElementById("nftsTitle").innerText = content[lang].nfts;
+    document.getElementById("raisedLabel").innerText = content[lang].raised;
+    document.getElementById("nft1txt").innerText = content[lang].nft1;
+    document.getElementById("nft2txt").innerText = content[lang].nft2;
+    document.getElementById("nft3txt").innerText = content[lang].nft3;
+    document.getElementById("usdt").innerText = content[lang].usdt;
+  }
+</script>
 </body>
 </html>
 
